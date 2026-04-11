@@ -42,29 +42,50 @@ Conversation 3 (out of scope):
 # ── Conversation 1: Happy path ─────────────────────────────────────────────
 
 CONVERSATION_1_TRACE = """
-PASTE YOUR rasa shell TERMINAL OUTPUT HERE
+Your input ->  I'm calling to confirm a booking.                                                                                                                  
+How many guests are you confirming for tonight's event?
+Your input ->  160 guests                                                                                                                                         
+And how many of those guests will need vegan meals?
+Your input ->  50 vegan                                                                                                                                           
+What deposit amount in GBP are you proposing to secure the booking?
+Your input ->  200 
+Thank you — booking confirmed. 160 guests, 50 requiring vegan meals, £200 deposit accepted. I'll send written confirmation to the organiser shortly.
+Is there anything else I can help you with?
+Your input ->  /stop 
 """
 
-CONVERSATION_1_OUTCOME = "FILL_ME_IN"   # "confirmed" or "escalated"
+CONVERSATION_1_OUTCOME = "confirmed"   # "confirmed" or "escalated"
 
 # ── Conversation 2: Deposit too high ───────────────────────────────────────
 
 CONVERSATION_2_TRACE = """
-PASTE YOUR rasa shell TERMINAL OUTPUT HERE
+Your input ->  I'm calling to confirm a booking.
+How many guests are you confirming for tonight's event?
+Your input ->  160 guests
+And how many of those guests will need vegan meals?
+Your input ->  50 vegan
+What deposit amount in GBP are you proposing to secure the booking?
+Your input ->  330                                                                                                                                                
+I need to check one thing with the organiser before I can confirm. The issue is: a deposit of £330 exceeds the organiser's authorised limit of £300. Can I call you back within 15 minutes?
+Is there anything else I can help you with?
+Your input ->  /stop 
 """
 
-CONVERSATION_2_OUTCOME = "FILL_ME_IN"   # "confirmed" or "escalated"
-CONVERSATION_2_REASON  = "FILL_ME_IN"   # the reason the agent gave for escalating
+CONVERSATION_2_OUTCOME = "escalated"   # "confirmed" or "escalated"
+CONVERSATION_2_REASON  = "A deposit of £330 exceeds the organiser's authorised limit of £300."   # the reason the agent gave for escalating
 
 # ── Conversation 3: Out of scope ───────────────────────────────────────────
 
 CONVERSATION_3_TRACE = """
-PASTE YOUR rasa shell TERMINAL OUTPUT HERE
+Your input ->  Hi. I'm calling to confirm if any of your guests require gluten free meals?                                                                        
+I am afraid, I don't know the answer. At this point, I don't have access to a knowledge base.
+Would you like to continue with confirm booking?
 """
 
 # Describe what CALM did after the out-of-scope message. Min 20 words.
 CONVERSATION_3_WHAT_HAPPENED = """
-FILL ME IN
+The agent admitted that it did not know the answer and asked if I wanted to continue with the task it knew how 
+to handle.
 """
 
 # Compare Rasa CALM's handling of the out-of-scope request to what
@@ -75,10 +96,10 @@ FILL ME IN
 
 # ── Task B: Cutoff guard ───────────────────────────────────────────────────
 
-TASK_B_DONE = None   # True or False
+TASK_B_DONE = False   # True or False
 
 # List every file you changed.
-TASK_B_FILES_CHANGED = []
+TASK_B_FILES_CHANGED = ["exercise3_rasa/actions/actions.py"]
 
 # How did you test that it works? Min 20 words.
 TASK_B_HOW_YOU_TESTED = """

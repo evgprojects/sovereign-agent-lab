@@ -16,7 +16,7 @@ QUERY_2_FINAL_ANSWER  = "FILL_ME_IN"
 # ── The experiment ─────────────────────────────────────────────────────────
 # Required: modify venue_server.py, rerun, revert.
 
-EX4_EXPERIMENT_DONE = None   # True or False
+EX4_EXPERIMENT_DONE = True   # True or False
 
 # What changed, and which files did or didn't need updating? Min 30 words.
 EX4_EXPERIMENT_RESULT = """

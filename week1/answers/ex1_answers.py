@@ -68,4 +68,5 @@ FILL ME IN
 
 CORE_LESSON = """
 FILL ME IN
+Context formatting matters most when...
 """
