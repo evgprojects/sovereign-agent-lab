@@ -60,7 +60,8 @@ PART_C_SANDWICH_ANSWER = "The Haymarket Vaults"
 
 # Explain what Part C showed, or why it wasn't needed. Minimum 30 words.
 PART_C_EXPLANATION = """
-FILL ME IN
+A weaker model was used for Part C, but it also managed to give correct answers for all three formatting
+ representations. I also tried an even smaller model google/gemma-2-2b-it, but it also got all the answers correctly.
 """
 
 # ── Core lesson ────────────────────────────────────────────────────────────
@@ -72,5 +73,5 @@ CORE_LESSON = """
 FILL ME IN
 Context formatting matters most when...
 
-I tried even smaller model google/gemma-2-2b-it, but it also got all the answers correct.
+improvement since 2023
 """
