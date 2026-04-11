@@ -25,6 +25,7 @@ PART_A_SANDWICH_CORRECT = True
 
 PART_A_EXPLANATION = """
 The stronger model gave correct answers for all three formatting representations.
+The model showed primacy bias for XML and sandwich representations by picking the venue that appeared first in the list.
 """
 
 # ── Part B ─────────────────────────────────────────────────────────────────
@@ -43,14 +44,15 @@ PART_B_CHANGED_RESULTS = False
 # Which distractor was more likely to cause a wrong answer, and why?
 # Minimum 20 words.
 PART_B_HARDEST_DISTRACTOR = """
-FILL ME IN
+The Holyrood Arms distractor was more likely to cause a wrong answer as it satisfied capacity and dietary requirements,
+and only failed on status, i.e. it was full. 
 """
 
 # ── Part C ─────────────────────────────────────────────────────────────────
 
 # Did the exercise run Part C (small model)?
 # Check outputs/ex1_results.json → "part_c_was_run"
-PART_C_WAS_RUN = None   # True or False
+PART_C_WAS_RUN = True   # True or False
 
 PART_C_PLAIN_ANSWER    = "The Haymarket Vaults"
 PART_C_XML_ANSWER      = "The Haymarket Vaults"
@@ -69,4 +71,6 @@ FILL ME IN
 CORE_LESSON = """
 FILL ME IN
 Context formatting matters most when...
+
+I tried even smaller model google/gemma-2-2b-it, but it also got all the answers correct.
 """
