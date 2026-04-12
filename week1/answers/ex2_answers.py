@@ -15,7 +15,7 @@ TASK_A_TOOLS_CALLED = []
 
 # Which venue did the agent confirm? Must be one of:
 # "The Albanach", "The Haymarket Vaults", or "none"
-TASK_A_CONFIRMED_VENUE = "FILL_ME_IN"
+TASK_A_CONFIRMED_VENUE = "The Albanach"
 
 # Total catering cost the agent calculated. Float, e.g. 5600.0
 # Write 0.0 if the agent didn't calculate it.
@@ -29,13 +29,13 @@ TASK_A_NOTES = ""   # optional — anything unexpected
 # ── Task B ─────────────────────────────────────────────────────────────────
 
 # Has generate_event_flyer been implemented (not just the stub)?
-TASK_B_IMPLEMENTED = None   # True or False
+TASK_B_IMPLEMENTED = True   # True or False
 
 # The image URL returned (or the error message if still a stub).
-TASK_B_IMAGE_URL_OR_ERROR = "FILL_ME_IN"
+TASK_B_IMAGE_URL_OR_ERROR = "https://pictures-storage.storage.eu-north1.nebius.cloud/text2img-ae13bec1-4d6b-4d94-973c-0050c21aa176_00001_.webp"
 
 # The prompt sent to the image model. Copy from terminal output.
-TASK_B_PROMPT_USED = "FILL_ME_IN"
+TASK_B_PROMPT_USED = "Professional event flyer for Edinburgh AI Meetup, tech professionals, modern venue at The Haymarket Vaults, Edinburgh. 160 guests tonight. Warm lighting, Scottish architecture background, clean modern typography."
 
 # ── Task C ─────────────────────────────────────────────────────────────────
 
