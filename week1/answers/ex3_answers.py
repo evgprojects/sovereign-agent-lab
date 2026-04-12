@@ -124,12 +124,13 @@ changing the code, but I decided to keep ActionValidateBooking as it is.
 # Min 30 words.
 
 CALM_VS_OLD_RASA = """
-FILL ME IN
-
-Think about:
-- What does the LLM handle now that Python handled before?
-- What does Python STILL handle, and why (hint: business rules)?
-- Is there anything you trusted more in the old approach?
+- The LLM handles language understanding. There is no more need to use regular expressions in python code to extract 
+answers, it's now done by the LLM.
+- The Python code is still needed to execute the business rules with the extracted values. For example, check the values
+and escalate if some constraints are not satisfied.
+- The old approach was completely deterministic, so if implemented correctly it is more trustworthy. However, if some edge
+case was not covered by the regular expression, it would fail. The new approach uses a LLM, so it is probabilistic. It
+can cover a wide range of possible user inputs, so it is much more flexible, however the rik is that it can hallucinate. 
 """
 
 # ── The setup cost ─────────────────────────────────────────────────────────
