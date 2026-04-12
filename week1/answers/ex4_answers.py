@@ -41,11 +41,14 @@ are required for the agent.
 # naming a component and explaining why that component does that job.
 
 WEEK_5_ARCHITECTURE = """
-- FILL ME IN
-- FILL ME IN
-- FILL ME IN
-- FILL ME IN
-- FILL ME IN
+- Real tools. Instead of using hardcoded data, the agent is integrated with real tools that can search the web, 
+send emails and communicate via messangers.
+- Planning. The agent has an access to two models: a thinking model for complex planning and a fast model for execution.
+- Memory. The agent should have memory, so it does not need to rediscover facts. That will lower the costs, reduce 
+latency and allow agent self-improvement.
+- Guardrails. To prevent poison attacks.
+- Observability / traceability. All agent input, output and tool calls should be auditable to allow troubleshooting if
+ anything goes wrong. 
 """
 
 # ── The guiding question ───────────────────────────────────────────────────
