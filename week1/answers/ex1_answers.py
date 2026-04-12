@@ -73,5 +73,5 @@ CORE_LESSON = """
 FILL ME IN
 Context formatting matters most when...
 
-improvement since 2023
+Modern models have improved since 2023, when the research from Stanford (Liu et al., 2023) was conducted, and 
 """

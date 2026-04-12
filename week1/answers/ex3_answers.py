@@ -96,14 +96,15 @@ FILL ME IN
 
 # ── Task B: Cutoff guard ───────────────────────────────────────────────────
 
-TASK_B_DONE = False   # True or False
+TASK_B_DONE = True   # True or False
 
 # List every file you changed.
 TASK_B_FILES_CHANGED = ["exercise3_rasa/actions/actions.py"]
 
 # How did you test that it works? Min 20 words.
 TASK_B_HOW_YOU_TESTED = """
-FILL ME IN
+I temporarily replaced now = datetime.datetime.now() with now = datetime.datetime(2026, 4, 12, 16, 50), so I did not
+have to wait till after 4:45 pm.
 """
 
 # ── CALM vs Old Rasa ───────────────────────────────────────────────────────
