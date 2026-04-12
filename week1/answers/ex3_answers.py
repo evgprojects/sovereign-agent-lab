@@ -144,10 +144,6 @@ can cover a wide range of possible user inputs, so it is much more flexible, how
 # Min 40 words.
 
 SETUP_COST_VALUE = """
-FILL ME IN
-
-Be specific. What can the Rasa CALM agent NOT do that LangGraph could?
-Is that a feature or a limitation for the confirmation use case?
-Think about: can the CALM agent improvise a response it wasn't trained on?
-Can it call a tool that wasn't defined in flows.yml?
+The CALM agent can not improvise a response it wasn't trained on and it can not call a tool that wasn't defined 
+in flows.yml. It is a feature for the confirmation use case, as it is a structured task with a predefined logic.
 """
