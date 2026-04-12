@@ -31,6 +31,9 @@ LINES_OF_TOOL_CODE_EX4 = 0   # count in exercise4_mcp_client.py
 # What does MCP buy you beyond "the tools are in a separate file"? Min 30 words.
 MCP_VALUE_PROPOSITION = """
 FILL ME IN
+An agent does not need to know about the tools it has an access to upfront. MCP provides dynamically discoverable tools.
+When an agent connect to an MCP server it discovers all available tools. If a new tool added to MCP server, no changes
+ are required for the agent.
 """
 
 # ── Week 5 architecture ────────────────────────────────────────────────────
