@@ -46,7 +46,8 @@ send emails and communicate via messangers.
 - Planning. The agent has an access to two models: a thinking model for complex planning and a fast model for execution.
 - Memory. The agent should have memory, so it does not need to rediscover facts. That will lower the costs, reduce 
 latency and allow agent self-improvement.
-- Guardrails. To prevent poison attacks.
+- Guardrails. To validate agent's input to prevent attacks on the agent, and to validate agent output to prevent harmful
+content to be exposed to the user or other human. 
 - Observability / traceability. All agent input, output and tool calls should be auditable to allow troubleshooting if
  anything goes wrong. 
 """
@@ -56,5 +57,5 @@ latency and allow agent self-improvement.
 # Must reference specific things you observed in your runs. Min 60 words.
 
 GUIDING_QUESTION_ANSWER = """
-FILL ME IN
+Open ended task vs task with clear criteria
 """
