@@ -104,7 +104,8 @@ TASK_B_FILES_CHANGED = ["exercise3_rasa/actions/actions.py"]
 # How did you test that it works? Min 20 words.
 TASK_B_HOW_YOU_TESTED = """
 I temporarily replaced now = datetime.datetime.now() with now = datetime.datetime(2026, 4, 12, 16, 50), so I did not
-have to wait till after 4:45 pm.
+have to wait till after 4:45 pm. A better way would be to inject date and time, so it can be faked for testing without
+changing the code, but I decided to keep ActionValidateBooking as it is.
 """
 
 # ── CALM vs Old Rasa ───────────────────────────────────────────────────────
