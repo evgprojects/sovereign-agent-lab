@@ -20,12 +20,12 @@ EX4_EXPERIMENT_DONE = True   # True or False
 
 # What changed, and which files did or didn't need updating? Min 30 words.
 EX4_EXPERIMENT_RESULT = """
-FILL ME IN
+Only mcp_venue_server.py code needed to be updated. The agent code didn't need updating at all.
 """
 
 # ── MCP vs hardcoded ───────────────────────────────────────────────────────
 
-LINES_OF_TOOL_CODE_EX2 = 0   # count in exercise2_langgraph.py
+LINES_OF_TOOL_CODE_EX2 = 2   # count in exercise2_langgraph.py
 LINES_OF_TOOL_CODE_EX4 = 0   # count in exercise4_mcp_client.py
 
 # What does MCP buy you beyond "the tools are in a separate file"? Min 30 words.
@@ -57,5 +57,8 @@ content to be exposed to the user or other human.
 # Must reference specific things you observed in your runs. Min 60 words.
 
 GUIDING_QUESTION_ANSWER = """
-Open ended task vs task with clear criteria
+The autonomous LangGraph agent is best for research open-ended tasks where the execution path is not predetermined, 
+like finding an appropriate venue based on some constraints. The Rasa agent is best for tasks with deterministic rules.
+Swapping the two would not work well: the Rasa agent is too constraint and not autonomous enough to do research, and the
+ autonomous agent can go astray, when all it needs is a predefined flow.
 """
