@@ -264,7 +264,7 @@ def _attempt_real_image_generation(prompt: str) -> str | None:
 
 
 @tool
-def generate_event_flyer(pub_name: str, guest_count: int, event_theme: str) -> str:
+def generate_event_flyer(venue_name: str, guest_count: int, event_theme: str) -> str:
     """
     Generate a promotional event flyer image for the confirmed Edinburgh venue.
     Call this AFTER a venue is confirmed, as the final output step.
@@ -305,7 +305,7 @@ def generate_event_flyer(pub_name: str, guest_count: int, event_theme: str) -> s
     #
     # When implemented, the mechanical check in grade.py will pass automatically.
     # ──────────────────────────────────────────────────────────────────────────
-    prompt = _build_flyer_prompt(pub_name, guest_count, event_theme)
+    prompt = _build_flyer_prompt(venue_name, guest_count, event_theme)
 
     # Path 1: real image generation (if a provider is configured)
     real_url = _attempt_real_image_generation(prompt)
@@ -326,7 +326,7 @@ def generate_event_flyer(pub_name: str, guest_count: int, event_theme: str) -> s
     digest = hashlib.sha1(prompt.encode("utf-8")).hexdigest()[:12]
     placeholder_url = (
         f"https://placehold.co/1200x628/1a1a2e/eaeaea"
-        f"?text={pub_name.replace(' ', '+')}+%7C+{guest_count}+guests"
+        f"?text={venue_name.replace(' ', '+')}+%7C+{guest_count}+guests"
         f"&id={digest}"
     )
     return json.dumps(
