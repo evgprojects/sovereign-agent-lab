@@ -9,9 +9,13 @@ Fill this in after running exercise4_mcp_client.py.
 # Tool names as shown in "Discovered N tools" output.
 TOOLS_DISCOVERED = ["search_venues", "get_venue_details"]
 
-QUERY_1_VENUE_NAME    = "FILL_ME_IN"
-QUERY_1_VENUE_ADDRESS = "FILL_ME_IN"
-QUERY_2_FINAL_ANSWER  = "FILL_ME_IN"
+QUERY_1_VENUE_NAME    = "The Haymarket Vaults"
+QUERY_1_VENUE_ADDRESS = "1 Dalry Road, Edinburgh"
+QUERY_2_FINAL_ANSWER  = """
+The full address of the best matching venue, The Haymarket Vaults, is:
+
+**1 Dalry Road, Edinburgh**"
+"""
 
 # ── The experiment ─────────────────────────────────────────────────────────
 # Required: modify venue_server.py, rerun, revert.
