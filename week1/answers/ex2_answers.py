@@ -144,7 +144,7 @@ Would you like help with anything related to Edinburgh pubs, weather, event plan
 SCENARIO_3_ACCEPTABLE = """
 I think this behaviour would be acceptable in a real booking system. Instead of hallucinating the answer, the agent 
 responded that it does not have access to real-time train schedules and suggested some sources to check. It gracefully
-handled out of scope scenario.
+handled out-of-scope scenario.
 """
 
 # ── Task D ─────────────────────────────────────────────────────────────────
@@ -172,7 +172,9 @@ graph TD;
 
 # Compare the LangGraph graph to exercise3_rasa/data/flows.yml. Min 30 words.
 TASK_D_COMPARISON = """
-FILL ME IN
+The LangGraph agent also admitted that it dit not have the right tools to handle out-of-scope scenario, but it 
+suggested some sources that the user could check to find the answer to their question. In this way, it was more helpful
+than Rasa agent, but if it hallucinated it would be worse.
 """
 
 # ── Reflection ─────────────────────────────────────────────────────────────
