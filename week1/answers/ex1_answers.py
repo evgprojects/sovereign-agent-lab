@@ -61,7 +61,8 @@ PART_C_SANDWICH_ANSWER = "The Haymarket Vaults"
 # Explain what Part C showed, or why it wasn't needed. Minimum 30 words.
 PART_C_EXPLANATION = """
 A weaker model was used for Part C, but it also managed to give correct answers for all three formatting
- representations. I also tried an even smaller model google/gemma-2-2b-it, but it also got all the answers correctly.
+ representations. Even the smallest available model via TokenFactory - google/gemma-2-2b-it got all the answers 
+ correctly.
 """
 
 # ── Core lesson ────────────────────────────────────────────────────────────
@@ -70,8 +71,8 @@ A weaker model was used for Part C, but it also managed to give correct answers 
 # "Context formatting matters most when..."
 
 CORE_LESSON = """
-FILL ME IN
-Context formatting matters most when...
-
-Modern models have improved since 2023, when the research from Stanford (Liu et al., 2023) was conducted, and 
+Context formatting matters most when the task involves relationships and constrains. However, the conducted experiments
+showed that models gave correct answers for all three tested formatting representations. That means that the task was
+too easy, so we did not see any effect from formatting. It also could mean that modern models have improved a lot 
+since 2023, when the research from Stanford (Liu et al., 2023) was conducted. 
 """
