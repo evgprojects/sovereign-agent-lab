@@ -184,5 +184,9 @@ than Rasa agent, but if it hallucinated it would be worse.
 # Must reference a specific behaviour from your run.
 
 MOST_SURPRISING = """
-FILL ME IN
+I was surprised by the agent reasoning that justified the choice of The Albanach instead of The Haymarket Vaults. Both
+answers would satisfy the given constraints. However, the agent did not pick one randomly, but used the following logic:
+'They checked both The Albanach and The Haymarket Vaults, and both are available. The Albanach has a capacity of 180, 
+which is more than enough, and The Haymarket Vaults have exactly 160. Since both meet the requirements, the user might
+ prefer the one with extra space, so The Albanach is probably the better choice.'
 """
