@@ -24,7 +24,8 @@ EX4_EXPERIMENT_DONE = True   # True or False
 
 # What changed, and which files did or didn't need updating? Min 30 words.
 EX4_EXPERIMENT_RESULT = """
-Only mcp_venue_server.py code needed to be updated. The agent code didn't need updating at all.
+The Albanach was no longer in search_venues tool result. Only The Haymarket Vaults was returned. Only 
+mcp_venue_server.py code needed to be updated. The agent code did not need updating at all.
 """
 
 # ── MCP vs hardcoded ───────────────────────────────────────────────────────
