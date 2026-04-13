@@ -91,8 +91,10 @@ to handle.
 # Compare Rasa CALM's handling of the out-of-scope request to what
 # LangGraph did in Exercise 2 Scenario 3. Min 40 words.
 OUT_OF_SCOPE_COMPARISON = """
-The LangGraph agent also admitted that it dit not have the right tools to handle out-of-scope scenario, but it 
-suggested some sources that the user could check to find the answer to their question.
+The same as the LangGraph agent, the Rasa agent admitted that it dit not have the required knowledge to handle out-of-scope
+ scenario. The Rasa agent did not try to provide any answers from alternative sources, just asked the user to stick to 
+ the script. While the LangGraph agent suggested some sources that the user could check to find the answer to their
+  question.
 """
 
 # ── Task B: Cutoff guard ───────────────────────────────────────────────────
