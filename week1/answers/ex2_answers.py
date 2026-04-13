@@ -11,7 +11,8 @@ Run `python grade.py ex2` to check for obvious issues.
 # Look at [TOOL_CALL] lines in your terminal output.
 # Example: ["check_pub_availability", "get_edinburgh_weather"]
 
-TASK_A_TOOLS_CALLED = []
+TASK_A_TOOLS_CALLED = ["check_pub_availability", "check_pub_availability", "calculate_catering_cost",
+                       "get_edinburgh_weather", "generate_event_flyer"]
 
 # Which venue did the agent confirm? Must be one of:
 # "The Albanach", "The Haymarket Vaults", or "none"
@@ -19,10 +20,10 @@ TASK_A_CONFIRMED_VENUE = "The Albanach"
 
 # Total catering cost the agent calculated. Float, e.g. 5600.0
 # Write 0.0 if the agent didn't calculate it.
-TASK_A_CATERING_COST_GBP = 0.0
+TASK_A_CATERING_COST_GBP = 5600.0
 
 # Did the weather tool return outdoor_ok = True or False?
-TASK_A_OUTDOOR_OK = None
+TASK_A_OUTDOOR_OK = True
 
 # Optional — anything unexpected.
 # If you used a non-default model via RESEARCH_MODEL env var, note it here.
@@ -71,29 +72,79 @@ FILL ME IN
 # Scenario 1: first choice unavailable
 # Quote the specific message where the agent changed course. Min 20 words.
 SCENARIO_1_PIVOT_MOMENT = """
-FILL ME IN
+<think>
+  Okay, let's see. The user wanted to check The Bow Bar first for 160 vegan guests. The first tool response showed that
+ The Bow Bar's capacity is only 80, which is too small. So, they don't meet the requirements. Then, the assistant 
+ checked The Albanach next. The response for The Albanach says it has a capacity of 180, which is more than the 
+ required 160, and they do have vegan options. The status is available and meets_all_constraints is true. 
+ That means The Albanach is a suitable venue.
+
+Now, the user's original request was to check The Bow Bar first, and if not possible, check any other available venue.
+ Since The Albanach meets all the requirements, the assistant should inform the user that The Albanach is available and
+  provide the details. The user might need to know the address and other info to proceed. Also, maybe check if they 
+  need further assistance like calculating catering costs or generating a flyer once the venue is confirmed. But the 
+  immediate answer is to present The Albanach as the available option.
+</think>
+
+The Albanach is available and meets all your requirements:
+- **Capacity**: 180 (exceeds your 160-guest requirement)
+- **Vegan options**: Available
+- **Address**: 2 Hunter Square, Edinburgh
+- **Status**: Available
+
+Would you like assistance with next steps like calculating catering costs or generating an event flyer for this venue?
 """
 
-SCENARIO_1_FALLBACK_VENUE = "FILL_ME_IN"
+SCENARIO_1_FALLBACK_VENUE = "The Albanach"
 
 # Scenario 2: impossible constraint (300 guests)
 # Did the agent recommend a pub name not in the known venues list?
-SCENARIO_2_HALLUCINATED = None   # True or False
+SCENARIO_2_HALLUCINATED = False   # True or False
 
 # Paste the final [AI] message.
 SCENARIO_2_FINAL_ANSWER = """
-FILL ME IN
+<think>
+Okay, let's see. The user is looking for a venue in Edinburgh that can accommodate 300 people with vegan options. They
+ provided a list of known venues: The Albanach, The Haymarket Vaults, The Guilford Arms, and The Bow Bar. I checked
+  each one using the check_pub_availability function.
+
+First, The Albanach had a capacity of 180, which is under 300, so that's out. Then The Haymarket Vaults with 160, also
+ too small. The Guilford Arms had 200 capacity but didn't offer vegan options. Finally, The Bow Bar, which has a 
+ capacity of 80 and is vegan-friendly, but it's already full. None of the venues meet both the capacity and availability
+  requirements. The user might need to look for other options outside the provided list or adjust their requirements.
+</think>
+
+None of the known Edinburgh venues can accommodate 300 guests with vegan options. The closest options have:
+- The Albanach (180 capacity, vegan available)
+- The Haymarket Vaults (160 capacity, vegan available)
+- The Guilford Arms (200 capacity, no vegan)
+- The Bow Bar (80 capacity, vegan available but full)
+
+Would you like to:
+1. Adjust guest count or dietary requirements?
+2. Search for alternative venues outside this list?
+3. Get help with a smaller-scale event?
 """
 
 # Scenario 3: out of scope (train times)
 # Did the agent try to call a tool?
-SCENARIO_3_TRIED_A_TOOL = None   # True or False
+SCENARIO_3_TRIED_A_TOOL = False   # True or False
 
-SCENARIO_3_RESPONSE = "FILL_ME_IN"
+SCENARIO_3_RESPONSE = """
+I don't have access to real-time train schedules or transportation data. For the most accurate information about the 
+last train from Edinburgh Waverley to London, I recommend checking:
+1. The National Rail website (www.nationalrail.co.uk)
+2. The ScotRail app or website
+3. Real-time departure boards at the station
+
+Would you like help with anything related to Edinburgh pubs, weather, event planning, or catering estimates instead?"
+"""
 
 # Would this behaviour be acceptable in a real booking assistant? Min 30 words.
 SCENARIO_3_ACCEPTABLE = """
-FILL ME IN
+I think this behaviour would be acceptable in a real booking system. Instead of hallucinating the answer, the agent 
+responded that it does not have access to real-time train schedules and suggested some sources to check. It gracefully
+handled out of scope scenario.
 """
 
 # ── Task D ─────────────────────────────────────────────────────────────────
