@@ -189,4 +189,7 @@ answers would satisfy the given constraints. However, the agent did not pick one
 'They checked both The Albanach and The Haymarket Vaults, and both are available. The Albanach has a capacity of 180, 
 which is more than enough, and The Haymarket Vaults have exactly 160. Since both meet the requirements, the user might
  prefer the one with extra space, so The Albanach is probably the better choice.'
+ Such behaviour might or might not be desirable. One one hand, the agent might fill gaps in the specification. On another
+ hand it might make a wrong choice. Asking the user to confirm if they want extra spaces would be desirable in this
+ context.  
 """
