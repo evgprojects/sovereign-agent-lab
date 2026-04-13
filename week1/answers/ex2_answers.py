@@ -51,12 +51,12 @@ TASK_B_IMPLEMENTED = True   # True or False
 # Which path did your run take? "live" or "placeholder"
 # Look for the "mode" field in the TOOL_RESULT output of Task B.
 # If you didn't set FLYER_IMAGE_MODEL in .env, you will get "placeholder".
-TASK_B_MODE = "FLYER_IMAGE_MODEL"
+TASK_B_MODE = "placeholder"
 
 # The image URL returned by the tool. Copy exactly from your terminal output.
 # In placeholder mode this will be a placehold.co URL.
 # In live mode it will be a provider CDN URL.
-TASK_B_IMAGE_URL = "https://pictures-storage.storage.eu-north1.nebius.cloud/text2img-ae13bec1-4d6b-4d94-973c-0050c21aa176_00001_.webp"
+TASK_B_IMAGE_URL = "https://placehold.co/1200x628/1a1a2e/eaeaea?text=The+Haymarket+Vaults+%7C+160+guests&id=2ef939fbbaf6"
 
 # The prompt sent to the image model. Copy from terminal output.
 TASK_B_PROMPT_USED = "Professional event flyer for Edinburgh AI Meetup, tech professionals, modern venue at The Haymarket Vaults, Edinburgh. 160 guests tonight. Warm lighting, Scottish architecture background, clean modern typography."
@@ -64,7 +64,8 @@ TASK_B_PROMPT_USED = "Professional event flyer for Edinburgh AI Meetup, tech pro
 # Why did the agent's behaviour NOT change when Nebius removed FLUX?
 # One sentence. This is the point of the lesson.
 TASK_B_WHY_AGENT_SURVIVED = """
-FILL ME IN
+Because the agent was made resilient to failures. If image generation endpoint throws an error, the error is caught by 
+the agent, and it returns the placeholder.  
 """
 
 # ── Task C ─────────────────────────────────────────────────────────────────
